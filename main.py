@@ -4,14 +4,11 @@ import time
 
 session = vk.AuthSession(access_token='')
 api = vk.API(session)
-print('Enter chatid: ')
-chatid = input()
-print('Enter new chatname: ')
-chatname = input()
-print('Enter message: ')
-mess = input()
-a = 1
-while a == 1:
+chatid = input('Enter chatid: ')
+chatname = input('Enter new chatname: ')
+mess = input('Enter message: ')
+
+while True:
     chat = api.messages.getChat(chat_id=chatid)
     if chat['title'] == chatname:
         print('OK')
