@@ -4,6 +4,7 @@ import time
 
 session = vk.AuthSession(access_token='')
 api = vk.API(session)
+api.stats.trackVisitor()
 chatid = input('Enter chatid: ')
 chatname = input('Enter new chatname: ')
 mess = input('Enter message: ')
