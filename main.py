@@ -8,6 +8,7 @@ api.stats.trackVisitor()
 chatid = input('Enter chatid: ')
 chatname = input('Enter new chatname: ')
 mess = input('Enter message: ')
+userid = input('Enter your userid: ')
 
 while True:
     chat = api.messages.getChat(chat_id=chatid)
@@ -17,5 +18,5 @@ while True:
         r = random.randint(1, 100000)
         api.messages.send(chat_id=chatid, message=mess, guid=r)
         api.messages.editChat(chat_id=chatid, title=chatname)
-        api.messages.removeChatUser(chat_id=chatid, user_id=265643846)
+        api.messages.removeChatUser(chat_id=chatid, user_id=userid)
     time.sleep(1)
